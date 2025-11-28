@@ -1,0 +1,102 @@
+.main-layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: #0d1117; /* Fondo oscuro futurista */
+  color: #e6edf3; /* Texto claro */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.sidebar {
+  width: 200px;
+  background-color: #161b22; /* Barra lateral más oscura */
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5); /* Sombra sutil */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Usar space-between de nuevo */
+  position: relative; /* Asegura el posicionamiento del botón de logout */
+  /* padding-bottom: 80px; */ /* Eliminado */
+}
+
+.sidebar-header {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.sidebar-header h2 {
+  color: #fff;
+  font-size: 24px;
+  margin: 0;
+  text-shadow: 0 0 10px #00f, 0 0 20px #00f, 0 0 30px #00f; /* Efecto neón azul */
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  /* margin-top: auto; */ /* No es necesario si el botón de logout tiene margin-top: auto */
+}
+
+.nav-item {
+  margin-bottom: 15px;
+}
+
+.nav-item a {
+  color: #c9d1d9;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 15px;
+  display: block;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-item a:hover {
+  background-color: #232830; /* Fondo al pasar el ratón */
+  color: #ffffff;
+  transform: translateX(5px); /* Pequeño movimiento */
+}
+
+.logout-button {
+  background-color: #dc3545; /* Botón de logout rojo */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  margin-top: auto; /* Empuja el botón al final del flex container */
+  position: static; /* Cambiado de absolute a static */
+  transform: none; /* Eliminado */
+  width: 100%; /* Ocupa el ancho completo con padding */
+}
+
+.logout-button:hover {
+  background-color: #c82333;
+}
+
+.content {
+  flex-grow: 1;
+  padding: 30px;
+  background-color: #0d1117; /* Asegura el fondo principal */
+  overflow-y: auto; /* Para contenido desplazable */
+}
+
+/* Animaciones de fondo */
+@keyframes gradient-animation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animated-background {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient-animation 15s ease infinite;
+}
+
+.main-layout.animated-background .content {
+    background-color: transparent; /* Permite ver el fondo animado */
+}
