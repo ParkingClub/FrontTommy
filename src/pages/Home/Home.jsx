@@ -130,7 +130,7 @@ const Home = () => {
     const productData = {
       tipo: formTipo,
       codigo: formCodigo,
-      nParte: formNParte,
+      nparte: formNParte,
       compatibilidad: formCompatibilidad,
       imagenUrl: formImagenUrl,
       idCategoria: parseInt(formIdCategoria, 10),
@@ -235,11 +235,11 @@ const Home = () => {
                   )}
                 </td>
                 <td className="actions">
-                  <button onClick={() => handleEditClick(producto)} className="action-button edit">
-                    <FaEdit /> Editar
+                  <button onClick={() => handleEditClick(producto)} className="action-button edit" title="Editar">
+                    <FaEdit />
                   </button>
-                  <button onClick={() => handleDeleteClick(producto.idProducto)} className="action-button delete">
-                    <FaTrash /> Eliminar
+                  <button onClick={() => handleDeleteClick(producto.idProducto)} className="action-button delete" title="Eliminar">
+                    <FaTrash />
                   </button>
                 </td>
               </tr>

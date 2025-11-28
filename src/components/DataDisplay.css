@@ -52,7 +52,7 @@
 
 .data-table th,
 .data-table td {
-  padding: 12px 15px;
+  padding: 8px 10px; /* Reduced padding for more compact rows */
   text-align: left;
   border-bottom: 1px solid #30363d;
   color: #e6edf3;
@@ -85,15 +85,17 @@
   background-color: transparent; /* Fondo transparente */
   color: #c9d1d9; /* Color de texto claro */
   border: 1px solid #30363d; /* Borde sutil */
-  padding: 8px 12px;
+  padding: 6px; /* Square-ish padding */
   border-radius: 4px;
   cursor: pointer;
-  font-size: 0.9em;
-  margin-right: 8px;
+  font-size: 1em; /* Slightly larger icon */
+  margin-right: 5px;
   transition: all 0.3s ease;
-  display: inline-flex; /* Para alinear el icono y el texto */
+  display: inline-flex;
+  justify-content: center;
   align-items: center;
-  gap: 5px; /* Espacio entre icono y texto */
+  width: 32px; /* Fixed width for uniformity */
+  height: 32px; /* Fixed height for uniformity */
 }
 
 .action-button.edit {
